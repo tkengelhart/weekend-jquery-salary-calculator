@@ -8,6 +8,12 @@ h1 {
     justify-content: center;
     font-size: 60px;
 }
+input {
+    padding: 5px;
+    font-weight: bolder;
+    border-radius: 12px;
+    font-size: 20px;
+}
 
 button {
     padding: 5px;
@@ -17,20 +23,19 @@ button {
 }
 table {
     padding: 5px;
-    width: 100%;
+    width: 75%;
+border: solid black 2px;
 }
-tbody {
-    padding: 5px;
-}
-table td {
-    padding: 5px;
-    text-align: center;
-}
-table tr {
-    padding: 5px
-   
-}
+
 #employee-list li{
     display: inline-block;
-
+}
+h2 {
+    justify-content: right;
+    text-align: right;
+    width: 75%
+}
+thead {
+    background-color: green;
+    color: white;
 }

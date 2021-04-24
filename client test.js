@@ -1,3 +1,55 @@
+
+    for (let i = 0; i < emplArr.length; i++) {
+        emplArr.push(emplObj);
+        console.log(emplArr);
+    }
+    //create click handler
+    $('#submitButton').on('click', function (event) {
+        //capture input box values and append to DOM
+        const firstName = $('#fName').val();
+        const lastName = $('#lName').val();
+        const idNumber = $('#idNum').val();
+        const jobTitle = $('#jTitle').val();
+        const annSalary = $('#aSalary').val();
+    });
+
+    function addEmployee(firstName, lastName, idNumber, jobTitle, annSalary) {
+        $('#employee-list').append(`
+    <li>
+  
+    </li>
+`)
+    }
+    $('#employee-list').empty();
+    const emplObj = {
+        first: $('#fName').val(),
+        last: $('#lName').val(),
+        id: $('#idNum').val(),
+        title: $('#jTitle').val(),
+        salary: $('#aSalary').val(),
+    }
+
+    //clear input items beforehand
+
+
+
+
+
+
+
+
+};
+
+
+
+
+
+
+
+
+
+
+
 console.log('in JS');
 
 $(onReady);
