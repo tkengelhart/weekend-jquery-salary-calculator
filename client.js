@@ -4,39 +4,40 @@ $(onReady);
 const emplArr = [];
 
 function onReady() {
-    firstName = $('#fName').val();
-    lastName = $('#lName').val();
-    idNumber = $('#idNum').val();
-    jobTitle = $('#jTitle').val();
-    annSalary = $('#aSalary').val();
-
+    //create click handler
     $('#submitButton').on('click', function (event) {
-        firstName.empty();
-        lastName.empty();
-        idNumber.empty();
-        jobTitle.empty();
-        annSalary.empty();
-        let table = $('<table></table');
-        let tbody = $('<tbody id="tableBody"></tbody');
-        table.append(tbody);
-        $('.formContainer').append(table);
-        for (let i = 0; i < emplArr.length; i++) {
-            emplArr.push(emplArr[i]);
-            const emplObj = {
-                emplObj: first = firstName,
-                emplObj: last = lastName,
-                emplObj: id = idNum,
-                emplObj: title = jobTitle,
-                emplObj: salary = aSalary
-            }
-            console.log(emplObj);
-            for (emplObj of emplArr) {
-                tbody.append(`<li>` + emplObj.first + emplObj.last + emplObj.id + emplObj.title + emplObj.salary + `</li>`);
-            }
-        }
+        //capture input box values and append to DOM
+        const firstName = $('#fName').val();
+        const lastName = $('#lName').val();
+        const idNumber = $('#idNum').val();
+        const jobTitle = $('#jTitle').val();
+        const annSalary = $('#aSalary').val();
+        //need function call to append this to the DOM
+
+        addEmployee(firstName, lastName, idNumber, jobTitle, annSalary);
+    });
+    //clear input items beforehand
+    $('#employee-list').empty();
+
+    for (let i = 0; i < emplArr.length; i++) {  //create a for loop to loop through array
+        emplArr.push(emplArr[i]);
         console.log(emplArr);
+    }
 
 
-    })
 };
+function addEmployee(firstName, lastName, idNumber, jobTitle, annSalary) {
+    $('#employee-list').append(`
+    <li>
+    <thead>
+     <tr>First Name</tr>
+     <tr>Last Name</tr>
+     <tr>ID</tr>
+     <tr>Job Title</tr>
+    <tr>Annual Salary</tr>
+    </thead>
+    </li>
+`);
+
+}
 
