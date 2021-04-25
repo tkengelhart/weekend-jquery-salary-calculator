@@ -30,7 +30,7 @@ table {
 #employee-list li{
     display: inline-block;
 }
-#monthlySum {
+h2 {
     justify-content: right;
     text-align: right;
     width: 75%;
