@@ -56,8 +56,9 @@ function onReady() {
     //create remove button click handler
 
     $('#employeeTable').on('click', $('#removeButton'), function (event) {
-        let deleteRow = `<tr></td>`;
-        $(event.target).remove(deleteRow);
+        let deleteRow = $(event.target);
+        deleteRow.closest('tr').remove();
+
 
     }); //end remove button
 
