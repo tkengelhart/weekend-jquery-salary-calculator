@@ -51,3 +51,18 @@ td {
 tr {
     padding: 5px;
 }
+.inTheRed {
+    background-color: red;
+    justify-content: right;
+    text-align: right;
+    width: 10%;
+    font-size: 20px;
+    font-weight: bolder;
+    display: inline-block;
+}
+#removeButton {
+    padding: 5px;
+    font-weight: bolder;
+    border-radius: 12px;
+    font-size: 20px;
+}
