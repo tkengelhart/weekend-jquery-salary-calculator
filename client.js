@@ -28,7 +28,6 @@ function onReady() {
                 sum += (Number(emplArr[i].salary))
             };
             addSum(sum);  //looping through to add salary to sum on each loop, make sure to empty sum after values entered (below)
-
             //loop through array and populate employees
             addEmployee(emplArr[i].first, emplArr[i].last, emplArr[i].id, emplArr[i].title,
                 emplArr[i].salary);
@@ -57,8 +56,10 @@ function onReady() {
     //create remove button click handler
 
     $('#employeeTable').on('click', $('#removeButton'), function (event) {
-        removeEmployee(event.targ)
-    }; //end remove button
+        let deleteRow = `<tr></td>`;
+        $(event.target).remove(deleteRow);
+
+    }); //end remove button
 
 
 } //end onReady
@@ -89,6 +90,7 @@ function addEmployee(firstName, lastName, idNumber, jobTitle, annSalary) { //cre
 
 //append running sum divided by 12 to get monthly costs   
 //need to change color to red if monthly costs exceed 20K
+
 function addSum(sum) {
     let monTotal = sum / 12;
     $('#monthlySum').text(parseFloat(monTotal.toFixed(2)));
