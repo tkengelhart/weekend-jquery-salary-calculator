@@ -51,6 +51,7 @@ function onReady() {
         sum = 0;  //reset global sum to zero on each pass through
 
 
+
     }); //end clickhandler
 
     //create remove button click handler
@@ -58,10 +59,15 @@ function onReady() {
 
     //create remove button to remove row upon click
 
+    //can't get it to update the sum
 
     $('#employeeTable').on('click', $('#removeButton'), function (event) {
         let deleteRow = $(event.target);
         deleteRow.closest('tr').remove();
+        removeSum(sum);
+
+
+
 
 
     }); //end remove button
@@ -101,9 +107,13 @@ function addSum(sum) {
     $('#monthlySum').text(parseFloat(monTotal.toFixed(2)));   //change to two decimal points
     if (monTotal > 20000) {  //if monthly costs are over 20k change background to red
         $('#monthlySum').addClass("inTheRed").text(parseFloat(monTotal.toFixed(2)));  //two decimal places
-    }
-
+    };
 };
+
+function removeSum(sum, annSalary) {
+    sum = sum - annSalary;
+};
+
 // sum += annSalary;
 // console.log(sum);
 
