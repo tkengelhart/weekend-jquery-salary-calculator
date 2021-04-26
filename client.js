@@ -12,6 +12,9 @@ function onReady() {
         const annSalary = Number($('#aSalary').val()); //variable for salary input
 
         const emplObj = {  //create employee object
+            //reuse variable names here for consistency - update this alter
+
+
             first: firstName,
             last: lastName,
             id: idNumber,
