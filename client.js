@@ -1,4 +1,4 @@
-const emplArr = [];
+const emplArr = [];  //create an array to store employee input entries
 let sum = 0;
 
 
@@ -23,7 +23,7 @@ function onReady() {
 
         $('#employeeTable').empty();  //clear employees on initialize
 
-        for (let i = 0; i < emplArr.length; i++) {
+        for (let i = 0; i < emplArr.length; i++) {  //for loop to extract employee info
             if (emplArr[i].salary > 0) {
                 sum += (Number(emplArr[i].salary))
             };
@@ -54,6 +54,10 @@ function onReady() {
     }); //end clickhandler
 
     //create remove button click handler
+
+
+    //create remove button to remove row upon click
+
 
     $('#employeeTable').on('click', $('#removeButton'), function (event) {
         let deleteRow = $(event.target);
@@ -93,15 +97,13 @@ function addEmployee(firstName, lastName, idNumber, jobTitle, annSalary) { //cre
 //need to change color to red if monthly costs exceed 20K
 
 function addSum(sum) {
-    let monTotal = sum / 12;
-    $('#monthlySum').text(parseFloat(monTotal.toFixed(2)));
-    if (monTotal > 20000) {
-        $('#monthlySum').addClass("inTheRed").text(parseFloat(monTotal.toFixed(2)));
+    let monTotal = sum / 12;  //monthly sums divided by 12
+    $('#monthlySum').text(parseFloat(monTotal.toFixed(2)));   //change to two decimal points
+    if (monTotal > 20000) {  //if monthly costs are over 20k change background to red
+        $('#monthlySum').addClass("inTheRed").text(parseFloat(monTotal.toFixed(2)));  //two decimal places
     }
 
 };
-
-
 // sum += annSalary;
 // console.log(sum);
 
