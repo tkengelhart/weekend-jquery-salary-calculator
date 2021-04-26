@@ -52,29 +52,19 @@ function onReady() {
         $('#jTitle').val('');
         $('#aSalary').val('');
         sum = 0;  //reset global sum to zero on each pass through
-
-
-
     }); //end clickhandler
 
     //create remove button click handler
-
-
-    //create remove button to remove row upon click
-
-    //can't get it to update the sum
 
     $('#employeeTable').on('click', $('#removeButton'), function (event) {
         let deleteRow = $(event.target);
         deleteRow.closest('tr').remove();
         removeSum(sum);
-
-
-
-
-
     }); //end remove button
 
+    //create remove button to remove row upon click
+
+    //can't get it to update the sum
 
 } //end onReady
 
@@ -121,5 +111,8 @@ function removeSum(sum, annSalary) {
 // console.log(sum);
 
 // $('#monthlySum').append(sum);
+
+
+
 
 $(onReady);
