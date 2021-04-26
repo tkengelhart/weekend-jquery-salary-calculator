@@ -29,6 +29,11 @@ table {
 
 #employee-list li{
     display: inline-block;
+list-style: none;
+}
+li {
+    list-style: none;
+
 }
 h2 {
     justify-content: right;
